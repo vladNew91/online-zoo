@@ -1,0 +1,232 @@
+.wrapper {
+   width: 1920px;
+   margin: 0 auto;
+   font-family: 'Roboto', sans-serif;
+   color: #000000;
+}
+
+/* sect_1 */
+.sect_1 {
+   background: url(../../assets/images/Sect_1.png);
+   height: 700px;
+}
+
+/* header */
+.header {
+   width: 1160px;
+   height: 80px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   margin: 0 auto;
+}
+
+.header img {
+   width: 112px;
+   height: 57px;
+   margin-right: 57px;
+}
+
+.hidden {
+   display: none;
+}
+
+.nav_ul {
+   width: 409px;
+   height: 21px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.nav_ul_li__item {
+   font-style: normal;
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 21px;
+   color: #000000;
+}
+
+.nav_ul_li__item_active {
+   -webkit-text-stroke: 0.5px #70CB0E;
+}
+/* END header */
+
+/* Watch your favorite animal online */
+.watch-online {
+   width: 1160px;
+   margin: 130px auto 0;
+}
+
+.watch-online h2 {
+   width: 580px;
+   height: 252px;
+   font-style: normal;
+   font-weight: 900;
+   font-size: 70px;
+   line-height: 120%;
+   letter-spacing: 0.03em;
+}
+
+.button-play {
+   width: 233px;
+   height: 51px;
+   background: #70CB0E;
+   border-radius: 30px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;   
+   transition: all 0.5s ease;
+   margin-top: 50px;
+}
+
+.button-play:hover {
+   background: #90f128;
+   transition: all 0.5s ease;
+}
+
+.button-play img {
+   margin-right: 6px;
+}
+
+.button-play h4 {
+   font-size: 18px;
+   line-height: 21px;
+   margin: 0;
+   color: #000000;
+}
+/* END Watch your favorite animal online */
+/* END sect_1 */
+
+/* how-it-works */
+.how-it-works {
+   background: url(../../assets/images/HowItWorks.png);
+   height: 983px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.how-it-works__item {
+   width: 1370px;
+   height: 783px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.how-it-works__item h3 {
+   font-weight: 500;
+   font-size: 40px;
+   line-height: 47px;
+   text-align: center;
+   margin: 0;
+}
+
+.how-it-works__slider {
+   width: 100%;
+   height: 450px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.size0 {
+   width: 230px;
+   height: 350px;
+}
+
+.size1 {
+   width: 280px;
+   height: 400px;
+}
+
+.how-it-works__item p {
+   width: 933px;
+   font-size: 16px;
+   line-height: 130%;
+   text-align: center;
+   margin: 0;
+}
+
+.how-it-works__item p a {
+   text-decoration-line: underline;
+   color: #267BDE;
+}
+/* END how-it-works */
+
+/* pets-in-zoo */
+.pets-in-zoo {
+   height: 1058px;
+   background: #FFFFFF;
+}
+
+.pets-in-zoo__item {
+   height: 858px;
+   width: 1160px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   margin: 0 auto;
+}
+
+.pictures__slider {
+   height: 630px;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.slider-arrow {
+   width: 63px;
+   height: 63px;
+   margin: auto 0;
+   transition: all 0.5s ease;
+}
+
+.slider-arrow:hover {
+   opacity: 0.8;
+   cursor: pointer;
+   transition: all 0.5s ease;
+}
+
+.pic {
+   width: 992px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.card-row {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.card-animal {
+   width: 233px;
+   height: 300px;
+}
+
+.btn-favorite {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 286px;
+   height: 51px;
+   background: #70CB0E;
+   border-radius: 30px;
+   font-size: 18px;
+   line-height: 21px;
+   color: #000000;
+   transition: all 0.5s ease;
+}
+
+.btn-favorite:hover {
+   background: #90f128;
+}
+/* END pets-in-zoo */
