@@ -66,6 +66,7 @@
    font-size: 70px;
    line-height: 120%;
    letter-spacing: 0.03em;
+   font-family: 'SceneW01-Black', sans-serif;
 }
 
 .button-play {
@@ -144,11 +145,11 @@
 }
 
 .how-it-works__item p {
-   width: 933px;
+   width: 937px;
    font-size: 16px;
-   line-height: 130%;
+   line-height: 132%;
    text-align: center;
-   margin: 0;
+   letter-spacing: -0.05px;
 }
 
 .how-it-works__item p a {
@@ -161,6 +162,9 @@
 .pets-in-zoo {
    height: 1058px;
    background: #FFFFFF;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .pets-in-zoo__item {
@@ -169,16 +173,22 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: space-between;
    margin: 0 auto;
+}
+
+.pets-in-zoo__item h3 {
+   font-weight: 500;
+   font-size: 40px;
+   line-height: 47px;
 }
 
 .pictures__slider {
    height: 630px;
    width: 100%;
-   display: flex;
+   display: inline-flex;
    flex-direction: row;
    justify-content: space-between;
+   margin-top: 80px;
 }
 
 .slider-arrow {
@@ -197,8 +207,10 @@
 .pic {
    width: 992px;
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    justify-content: space-between;
+   flex-wrap: wrap;
+   align-content: space-between;
 }
 
 .card-row {
@@ -207,10 +219,57 @@
    justify-content: space-between;
 }
 
+.panda {
+   background: url(../../assets/images/panda-card.png);
+}
+
+.alegator {
+   background: url(../../assets/images/alligator-card.png);
+}
+
+.garilla {
+   background: url(../../assets/images/garilla-card.png);
+}
+
+.elephant {
+   background: url(../../assets/images/elephant-card.png)
+}
+
+.bear {
+   background: url(../../assets/images/bear-card.png)
+}
+
+.eagle {
+   background: url(../../assets/images/eagle-card.png)
+}
+
+.owl {
+   background: url(../../assets/images/owl-card.png)
+}
+
+.pingvin {
+   background: url(../../assets/images/pingvin-card.png)
+}
+
 .card-animal {
    width: 233px;
    height: 300px;
+   transition: all 0.5s ease;
+   font-size: 16px;
+   line-height: 19px;
 }
+
+.card-explanation {
+   margin-top: 15px;
+   color: #FFFFFF;
+   text-align: center;
+}
+
+.card-animal:hover {
+   transition: all 0.5s ease;
+   transform: scaleX(1.08583691) scaleY(1.1);
+   font-size: 18px;
+} 
 
 .btn-favorite {
    display: flex;
@@ -224,9 +283,18 @@
    line-height: 21px;
    color: #000000;
    transition: all 0.5s ease;
+   margin-top: 50px;
 }
 
 .btn-favorite:hover {
    background: #90f128;
 }
 /* END pets-in-zoo */
+
+/* pay-and-feed */
+.pay-and-feed {
+   width: 1920px;
+   height: 600px;
+   background: #FFFFFF;
+}
+/* END pay-and-feed */
