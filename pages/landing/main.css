@@ -296,5 +296,57 @@
    width: 1920px;
    height: 600px;
    background: #FFFFFF;
+   display: flex;
+   justify-content: center;
+}
+
+.pay-and-feed__item {
+   width: max-content;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   position: relative;
+}
+
+.pay-and-feed__item h3 {
+   font-weight: 500;
+   font-size: 40px;
+   line-height: 47px;
+}
+
+.pay-block {
+   width: 1051px;
+   height: 276px;
+   display: flex;
+   flex-direction: row;
+   margin-top: 80px;
+   margin-left: 60px;
+}
+
+
+.pay-block__item {
+   position: relative;
+}
+
+.icon_margin {
+   margin-left: 45px;
+}
+
+.text {
+   position: absolute;
+   left: 0px;
+   top: 238px;
+   font-size: 16px;
+   line-height: 19px;
+   text-align: center;
+   font-style: normal;
+   font-weight: normal;
+}
+
+.arrows_pay {
+   position: absolute;
+   top: 32px;
+   left: 272px;
 }
 /* END pay-and-feed */
