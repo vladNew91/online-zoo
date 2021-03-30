@@ -48,6 +48,7 @@
 }
 
 .nav_ul_li__item_active {
+   font-weight: 900;
    -webkit-text-stroke: 0.6px #70CB0E;
 }
 /* END header */
