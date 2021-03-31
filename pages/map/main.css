@@ -61,6 +61,13 @@ main {
    background: #A7E1FF;
    font-size: 16px;
    line-height: 19px;
+   position: relative;
+}
+
+.zoom {
+   position: absolute;
+   right: 10px;
+   bottom: 82px;
 }
 
 .map {
@@ -74,28 +81,71 @@ main {
 }
 
 .animal-on-map {
-   width: 124px;
-   height: 64px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
    position: absolute;
+}
+
+.tooltiptext {
+   visibility: hidden;
+   width: 102px;
+   background-color: #70CB0E;
+   text-align: center;
+   padding: 8px 4px;
+   position: absolute;
+   z-index: 1;
+   top: 10px;
+   left: 110%;
+}
+
+.tooltiptext::after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   right: 100%;
+   margin-top: -5px;
+   border-width: 5px;
+   border-style: solid;
+   border-color: transparent #70CB0E transparent transparent;
+}
+
+.animal-on-map:hover .tooltiptext {
+   visibility: visible;
 }
 
 .animal-on-map img {
    border-radius: 50%;
-   border:#ffffff solid 3px;
+   border: 2px solid #ffffff;
 }
 
-.animal-on-map h4 {
+.animal-on-map img:hover {
+   border: 4px solid #70CB0E;
+}
+
+.name-country {
    font-style: normal;
    font-weight: normal;
-   text-transform: uppercase;
+   position: absolute;
+}
+
+.USA {
+   top: 478px;
+   left: 201px;
+}
+
+.DRC {
+   top: 627px;
+   left: 511px;
+   width: 61px;
+   text-align: center;
+}
+
+.China {
+   top: 491px;
+   left: 833px;
 }
 
 .eagle {
    top: 496px;
-   left: 20px;
+   left: 77px;
 }
 
 .allig {
@@ -103,7 +153,15 @@ main {
    left: 298px;
 }
 
+.gorilla {
+   top: 605px;
+   left: 655px;
+}
 
+.panda {
+   top: 509px;
+   left: 922px;
+}
 /* END map */
 
 /* footer */
@@ -148,6 +206,11 @@ footer {
    background: #70CB0E;
    border-radius: 30px;
    transition: all 0.5s ease;
+   margin-right: 162px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #000000;;
 }
 
 .btn-donate:hover {
@@ -216,8 +279,6 @@ footer {
 .footer-bottom h4 {
    font-style: normal;
    font-weight: normal;
-   font-size: 18px;
-   line-height: 21px;
 }
 
 .y20-21 {
