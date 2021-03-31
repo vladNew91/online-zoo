@@ -46,6 +46,12 @@ header {
    font-size: 18px;
    line-height: 21px;
    color: #000000;
+   transition: all 0.5s ease;
+}
+
+.nav_ul_li__item:hover {
+   color: #70CB0E;
+   transition: all 0.5s ease;
 }
 
 .nav_ul_li__item_active {
@@ -242,6 +248,12 @@ footer {
 
 .nav-footer-list a {
    color: #000000;
+   transition: all 0.5s ease;
+}
+
+.nav-footer-list a:hover {
+   color: #70CB0E;
+   transition: all 0.5s ease;
 }
 
 .footer-socials {

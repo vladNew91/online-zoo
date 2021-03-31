@@ -40,11 +40,16 @@
 }
 
 .nav_ul_li__item {
-   font-style: normal;
    font-weight: 500;
    font-size: 18px;
    line-height: 21px;
    color: #000000;
+   transition: all 0.5s ease;
+}
+
+.nav_ul_li__item:hover {
+   color: #70CB0E;
+   transition: all 0.5s ease;
 }
 
 .nav_ul_li__item_active {
@@ -503,6 +508,16 @@ footer {
    flex-direction: row;
    align-content: space-between;
    flex-wrap: wrap;
+}
+
+.nav-footer-list a {
+   color: #000000;
+   transition: all 0.5s ease;
+}
+
+.nav-footer-list a:hover {
+   color: #70CB0E;
+   transition: all 0.5s ease;
 }
 
 .nav-about {
