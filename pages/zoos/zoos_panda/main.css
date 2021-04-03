@@ -109,6 +109,18 @@ main {
    margin-right: 148px;
 }
 
+.allig {
+   margin-right: 217px;
+}
+
+.eagle {
+   margin-right: 180px;
+}
+
+.gorilla {
+   margin-right: 273px; 
+}
+
 .info-blocks {
    width: 100%;
    height: 304px;
@@ -343,7 +355,6 @@ aside {
 
 .PANDA {
    background: url(../../../assets/icons/panda.png);
-   border: 4px solid #70CB0E;
 }
 
 .EAGLE {
@@ -406,5 +417,9 @@ aside {
    border-width: 5px;
    border-style: solid;
    border-color: transparent #70CB0E transparent transparent;
+}
+
+.active-bg {
+   border: 4px solid #70CB0E;
 }
 /* END aside */

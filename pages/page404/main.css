@@ -1,0 +1,36 @@
+.wrapper {
+   width: 100vw;
+   background: #FFFFFF;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+main {
+   width: 675px;
+   max-height: 700px;
+   position: relative;
+   font-family: 'Bebas Neue', cursive;
+   font-style: normal;
+   font-weight: bold;
+   margin: auto;
+}
+
+p {
+   font-size: 70px;
+   line-height: 70px;
+   color: #333333;
+   position: absolute;
+   top: 593px;
+   left: 163px;
+}
+
+span {
+   font-size: 20px;
+   line-height: 20px;
+   color: #59C3FB;
+   position: absolute;
+   bottom: 2px;
+   left: 230px;
+}
