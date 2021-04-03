@@ -3,6 +3,9 @@
    margin: 0 auto;
    font-family: 'Roboto', sans-serif;
    color: #000000;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
 }
 
 /* sect_1 */
@@ -205,7 +208,7 @@
 }
 
 .slider-arrow:hover {
-   opacity: 0.8;
+   transform: scale(1.2);
    cursor: pointer;
    transition: all 0.5s ease;
 }

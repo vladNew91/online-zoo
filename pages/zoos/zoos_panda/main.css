@@ -4,6 +4,9 @@
    color: #000000;
    font-style: normal;
    font-weight: normal;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
 }
 
 /* header */
