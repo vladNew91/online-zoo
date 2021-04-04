@@ -1,5 +1,5 @@
 .wrapper {
-   width: 1920px;
+   width: 100%;
    margin: 0 auto;
    font-family: 'Roboto', sans-serif;
    color: #000000;
@@ -11,7 +11,18 @@
 /* sect_1 */
 .sect_1 {
    background: url(../../assets/images/Sect_1.png);
+   background-repeat: no-repeat;
+   background-position: center;
    height: 700px;
+   position: relative;
+}
+
+.cover {
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(90deg, #B5E6FF, #59C3FB);
+   z-index: -3;
+   position: absolute;
 }
 
 /* header */
@@ -116,6 +127,8 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   background-repeat: no-repeat;
+   background-position: center;
 }
 
 .how-it-works__item {
@@ -458,26 +471,30 @@
 footer {
    width: 100%;
    height: 270px;
-   position: relative;
-   background: url(../../assets/images/Bg_footer.png);
+   background: #DFF5B0;
    display: flex;
    justify-content: center;
-}
-
-.footer-desert {
-   position: absolute;
-   bottom: 0;
-   left: 13px;
+   position: relative;
 }
 
 .footer {
    width: 1160px;
    padding: 80px 0 20px;
    z-index: 1;
-   font-style: normal;
-   font-weight: normal;
    font-size: 18px;
    line-height: 21px;
+   margin: 0 auto;
+}
+
+.footer-desert {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: -36px;
+   left: -10px;
+   background: url(../../assets/images/footer-desert.png);
+   background-repeat: no-repeat;
+   background-position: center;
 }
 
 .footer-top {

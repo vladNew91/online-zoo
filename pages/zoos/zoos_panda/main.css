@@ -11,7 +11,7 @@
 
 /* header */
 header {
-   width: 1920px;
+   width: 100%;
    margin: 0 auto;
    height: max-content;
 }
@@ -64,7 +64,7 @@ header {
 
 /* zoo */
 main {
-   width: 1920px;
+   width: 100%;
    margin: 0 auto;
    height: 1550px;
    font-style: normal;
@@ -194,20 +194,12 @@ main {
 
 /* footer */
 footer {
-   width: 1920px;
+   width: 100%;
    height: 270px;
-   position: relative;
    background: #DFF5B0;
    display: flex;
    justify-content: center;
-   margin: 0 auto;
-}
-
-.footer-desert {
-   position: absolute;
-   bottom: 0;
-   left: 13px;
-   background-size: cover;
+   position: relative;
 }
 
 .footer {
@@ -216,6 +208,18 @@ footer {
    z-index: 1;
    font-size: 18px;
    line-height: 21px;
+   margin: 0 auto;
+}
+
+.footer-desert {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: -36px;
+   left: -10px;
+   background: url(../../../assets/images/footer-desert.png);
+   background-repeat: no-repeat;
+   background-position: center;
 }
 
 .footer-top {
