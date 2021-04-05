@@ -20,7 +20,7 @@
 .cover {
    width: 100%;
    height: 100%;
-   background: linear-gradient(90deg, #B5E6FF, #59C3FB);
+   background: radial-gradient( #B5E6FF, #59C3FB);
    z-index: -3;
    position: absolute;
 }
@@ -148,6 +148,7 @@
    margin: 0;
 }
 
+/* SLIDER how-it-works */
 .how-it-works__slider {
    width: 100%;
    height: 450px;
@@ -156,15 +157,44 @@
    align-items: center;
 }
 
-.size0 {
-   width: 230px;
-   height: 350px;
+.eagle-slide {
+   background: url(../../assets/images/mightyEeagle.png);
 }
 
-.size1 {
+.leon-slide {
+   background: url(../../assets/images/lion.png);
+}
+
+.panda-slide {
+   background: url(../../assets/images/panda.png);
+}
+
+.monkey-slide {
+   background: url(../../assets/images/monkey.png);
+}
+
+.elephant-slide {
+   background: url(../../assets/images/elephant.png);
+}
+
+.slider-li-item {
+   width: 230px;
+   height: 350px;
+   overflow: hidden;
+   background-position: center;
+   background-attachment:local;
+}
+
+.size2 {
    width: 280px;
    height: 400px;
 }
+
+.size3 {
+   width: 350px;
+   height: 450px;
+}
+/* END SLIDER how-it-works */
 
 .how-it-works__item p {
    width: 937px;
