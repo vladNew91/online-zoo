@@ -400,8 +400,7 @@ aside {
    border-style: solid;
    border-color: transparent #70CB0E transparent transparent;
 }
-.container__item:hover .tooltiptext,
-.container__item .active-tlt {
+.container__item:hover .tooltiptext {
    display: block;
    width: 104px;
    height: 39px;
@@ -414,8 +413,7 @@ aside {
    border-color: transparent #70CB0E transparent transparent;
 }
 
-.container__item .tooltiptext::after,
-.container__item .active-tlt::after {
+.container__item .tooltiptext::after {
    content: "";
    position: absolute;
    top: 50%;
