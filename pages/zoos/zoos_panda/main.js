@@ -10,3 +10,11 @@ btn.forEach((el, i) => {
       infoArrowRotate[i].classList.toggle('info-arrow-rotate');
    })
 })
+
+// aside
+const btnShowAside = document.querySelector(".show-aside-1200");
+const aside = document.querySelector(".aside");
+
+btnShowAside.addEventListener("click", () => {
+   aside.classList.toggle("hidden-aside")
+})
