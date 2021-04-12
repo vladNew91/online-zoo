@@ -335,3 +335,26 @@ footer {
    margin-right: 207px;
 } 
 /* END footer */
+
+@media (max-width: 1200px) {
+   .footer-desert {
+      background: url(../../assets/images/bg-footer-1200.png);
+      top: -67px;
+      left: -2px;
+   }
+
+   .eagle {
+      top: 491px;
+      left: 72px;
+   }
+   
+   .panda {
+      top: 501px;
+      left: 920px;
+   }
+
+   .gorilla {
+      top: 602px;
+      left: 654px;
+   }
+}
