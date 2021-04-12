@@ -433,7 +433,7 @@ aside {
 }
 /* END aside */
 
-@media (max-width: 1200px) {
+@media (max-width: 1370px) {
    .show-aside-1200 {
       display: block;
       position: fixed;
@@ -444,10 +444,16 @@ aside {
    }
 
    .aside {
-      display: none;
+      opacity: 0;
    }
 
    .hidden-aside {
-      display: flex;
+      opacity: 1;
+   }
+
+   .footer-desert {
+      background: url(../../assets/images/bg-footer-1200.png);
+      top: -52px;
+      left: 1px;
    }
 }
