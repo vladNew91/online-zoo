@@ -254,6 +254,10 @@
    transition: all 0.5s ease;
 }
 
+.arrows-640 {
+   display: none;
+}
+
 .pic {
    width: 992px;
    display: flex;
@@ -399,6 +403,10 @@
    top: 32px;
    left: 272px;
 }
+
+.arrows_pay-640 {
+   display: none;
+} 
 /* END pay-and-feed */
 
 /* testimonials */
@@ -436,11 +444,11 @@
 }
 
 .testimonials-kard {
-   width: 100%;
+   width: 992px;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-   margin: 0 20px;
+   margin: 0 auto;
 }
 
 .testimonials-kard__item {
@@ -523,6 +531,10 @@ footer {
    background: url(../../assets/images/footer-desert.png);
    background-repeat: no-repeat;
    background-position: center;
+}
+
+.footer-desert-640 {
+   display: none;
 }
 
 .footer-top {
@@ -646,5 +658,286 @@ footer {
 
    .size3 {
       width: 350px;
+   }
+}
+
+@media (width: 1200px) {
+   .sect_1 {
+      background-position: 48%;
+   }
+}
+
+@media (max-width: 1199px) {
+   .sect_1 {
+      background-position: 61%;
+      background-position-y: 12px;
+   }
+
+   .header {
+      width: 100%;
+   }
+
+   .header img {
+      margin: 0 50px 0 20px;
+   }
+
+   .watch-online {    
+      width: calc(100% - 37px);
+      margin-top: 71px;
+      display: flex;
+      flex-direction: column;
+   }
+
+   .watch-online h2 {
+      font-size: 50px;
+      width: 414px;
+      height: 180px;
+   }
+
+   .button-play {
+      width: 187px;
+      height: 51px;
+   }
+
+   .wrapper-slide {
+      width: 100%;
+
+   }
+
+   .how-it-works {
+      width: 100%;
+      height: 1067px;
+   }
+
+   .how-it-works__item {
+      height: 867px;
+   }
+
+   .how-it-works__item p {
+      width: 536px;
+      height: 210px;
+   }
+
+   .pets-in-zoo {
+      height: 1152px;
+   }
+
+   .pictures__slider {
+      margin-top: 50px;
+      height: 660px;
+   }
+
+   .pets-in-zoo__item {
+      height: 952px;
+      width: 601px;
+      position: relative;
+      margin: 0 auto;
+      overflow: hidden;
+   }
+
+   .card-animal {
+      width: 187px;
+      margin-top: 30px;
+   }
+
+   .pic {
+      overflow: hidden;
+      overflow-y: auto;
+   }
+
+   .slider-arrow {
+      display: none;
+   }
+
+   .arrows-640 {
+      display: flex;
+      flex-direction: row;
+      width: 148px;
+      justify-content: space-between;
+      margin-top: 30px;
+   }
+
+   .btn-favorite {
+      margin-top: 50px;
+   }
+
+   .pay-and-feed {
+      height: 930px;
+      overflow: hidden;
+   }
+
+   .pay-and-feed__item {
+      height: 730px;
+      margin: auto 0;
+      justify-content: start;
+   }
+
+   .pay-block__item h4 {
+      width: 192px;
+      margin-left: 64px;
+   }
+
+   .arrows_pay {
+      display: none;
+   }
+
+   .arrows_pay-640 {
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: 120px;
+   }
+
+   .pay-block {
+      width: 640px;
+      height: 603px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 92px;
+      justify-content: center;
+      margin-left: 0px;
+      position: relative;
+   }
+
+   .icon_margin {
+      margin-left: -37px;
+   }
+
+   .icon_margin:last-child {
+      margin-left: 0;
+   }
+
+   .testimonials {
+      height: 951px;
+      width: 100%;
+   }
+
+   .testimonials__item {
+      width: 100%;
+      height: 751px;
+      margin: auto 0;
+      justify-content: unset;
+   }
+
+   .testimonials-reviews {
+      width: 100%;
+      height: max-content;
+      overflow: hidden;
+      overflow-x: auto;
+   }
+
+   .testimonials-kard {
+      width: max-content;
+      display: flex;
+      padding: 0 20px;
+      box-sizing: border-box;
+   }
+
+   .testimonials-kard__item {
+      width: 187px;
+      height: 429px;
+      margin-right: 20px;
+   }
+
+   .donat-name {
+      top: 22px;
+      left: 79px;
+   }
+
+   .donat-coin {
+      top: 45px;
+      left: 80px;
+   }
+
+   .donat-cash {
+      top: 44px;
+      left: 94px;
+   }
+
+   .new-posit {
+      top: 65px;
+   }
+
+   .donat-feedback {
+      margin-right: 17px;
+   }
+
+   .btn-feedback {
+      width: 226px;
+   }
+
+   /* footer */
+   footer {
+      height: 359px;
+   }
+
+   .footer {
+      width: 640px;
+      padding: 80px 20px 20px 20px;
+      box-sizing: border-box;
+      position: relative;
+   }
+
+   .footer-top {
+      height: 83px;
+   }
+
+   .logo-footer {
+      margin-right: 56px;
+   }
+
+   .btn-volont {
+      width: 207px;
+      height: 50px;
+      position: absolute;
+      right: 20px;
+      top: 137px;
+      margin-right: 0;
+   }
+
+   .nav-footer {
+      width: 190px;
+      height: 57px;
+      margin-right: 66px;
+   }
+
+   .nav-about {
+      margin-right: 54px;
+   }
+
+   .nav-map {
+      margin-right: 68px;
+   }
+
+   .footer-bottom {
+      margin-top: 25px;
+   }
+
+   .rss-logo {
+      margin-right: 75px;
+   }
+
+   .autor {
+      position: absolute;
+      bottom: 51px;
+      left: 239px;
+   }
+
+   .y20-21 {
+      margin: 0;
+      position: absolute;
+      text-align: center;
+      left: 110px;
+      bottom: 20px;
+   }
+
+   .footer-desert {
+      display: none;
+   }
+
+   .footer-desert-640 {
+      display: block;
+      position: absolute;
+      top: -44px;
    }
 }
