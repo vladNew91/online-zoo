@@ -20,6 +20,10 @@ main {
    margin: auto;
 }
 
+.figure__img {
+   width: 100%;
+}
+
 p {
    font-size: 70px;
    line-height: 70px;
@@ -36,4 +40,21 @@ a {
    position: absolute;
    bottom: 2px;
    left: 230px;
+}
+
+@media (max-width: 720px) {
+   main {
+      width: 550px;
+      max-height: 582px;
+   }
+
+   p {
+      top: 482px;
+      left: 100px;
+   }
+
+   a {
+      bottom: 0;
+      left: 168px;
+   }
 }
