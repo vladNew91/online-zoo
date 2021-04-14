@@ -109,7 +109,7 @@ main {
 }
 
 .map {
-   width: 1160px;
+   width: max-content;
    position: relative;
    margin: 0 auto;
 }
@@ -143,6 +143,10 @@ main {
    border-width: 5px;
    border-style: solid;
    border-color: transparent #70CB0E transparent transparent;
+}
+
+.btn-tooltip-watch {
+   display: none;
 }
 
 .animal-on-map:hover .tooltiptext {
@@ -230,6 +234,10 @@ footer {
    background: url(../../assets/images/footer-desert.png);
    background-repeat: no-repeat;
    background-position: center;
+}
+
+.footer-desert-640 {
+   display: none;
 }
 
 .footer-top {
@@ -342,19 +350,167 @@ footer {
       top: -67px;
       left: -2px;
    }
+}
+
+@media (max-width: 1199px) {
+   .header {
+      width: 100%;
+   }
+
+   .header img {
+      margin: 0 50px 0 20px;
+   }
+
+   main {
+      overflow: hidden;
+      overflow-x: auto;
+      height: 800px;
+   }
+
+   .world-map {
+      width: 933px;
+      height: 600px;
+   }
 
    .eagle {
-      top: 491px;
-      left: 72px;
+      top: 429px;
+      left: 41px;
    }
-   
-   .panda {
-      top: 501px;
-      left: 920px;
+
+   .allig {
+      top: 410px;
+      left: 244px;
    }
 
    .gorilla {
-      top: 602px;
-      left: 654px;
+      top: 490px;
+      left: 525px;
+   }
+
+   .panda {
+      top: 433px;
+      left: 760px;
+   }
+
+   .USA {
+      top: 400px;
+      left: 158px;
+   }
+
+   .DRC {
+      top: 530px;
+      left: 397px;
+   }
+
+   .China {
+      top: 420px;
+      left: 666px;
+   }
+
+   .tooltiptext {
+      width: 160px;
+      height: 84px;
+      top: -17px;
+      text-align: center;
+   }
+
+   .btn-tooltip-watch {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 147px;
+      height: 40px;
+      background: #FFB600;
+      border-radius: 30px;
+      position: absolute;
+      left: calc(50% - 147px/2);
+      top: 53px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+      color: #000000;
+   }
+
+   .zoom {
+      right: calc(0vw + 20px);
+   }
+
+   /* footer */
+   footer {
+      height: 359px;
+   }
+
+   .footer {
+      width: 640px;
+      padding: 80px 20px 20px 20px;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+   }
+
+   .footer-top {
+      height: 83px;
+   }
+
+   .logo-footer {
+      margin-right: 56px;
+   }
+
+   .btn-volont {
+      width: 207px;
+      height: 50px;
+      position: absolute;
+      right: 20px;
+      top: 137px;
+      margin-right: 0;
+      margin-top: 50px;
+   }
+
+   .nav-footer {
+      width: 190px;
+      height: 57px;
+      margin-right: 66px;
+   }
+
+   .nav-about {
+      margin-right: 54px;
+   }
+
+   .nav-map {
+      margin-right: 68px;
+   }
+
+   .footer-bottom {
+      margin-top: 25px;
+   }
+
+   .rss-logo {
+      margin-right: 75px;
+   }
+
+   .autor {
+      position: absolute;
+      bottom: 51px;
+      left: 239px;
+   }
+
+   .y20-21 {
+      margin: 0;
+      position: absolute;
+      text-align: center;
+      left: 110px;
+      bottom: 20px;
+   }
+
+   .footer-desert {
+      display: none;
+   }
+
+   .footer-desert-640 {
+      display: block;
+      position: absolute;
+      top: -44px;
+      width: 640px;
    }
 }
