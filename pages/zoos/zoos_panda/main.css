@@ -97,6 +97,10 @@ main {
    height: 653px;
 }
 
+.btn-feed {
+   display: none;
+}
+
 .demo-video {
    width: 275px;
    height: 155px;
@@ -641,6 +645,11 @@ aside {
       height: 22px;
    }
 
+   .aside {
+      width: 93px;
+      height: 306px;
+   }
+
    .show-aside-1200 {
       width: 45px;
       height: 45px;
@@ -733,7 +742,8 @@ aside {
    .footer {
       height: 742px;
       width: 100%;
-      padding: 80px 10xp 20px;
+      padding-left: 10px;
+      padding-right: 10px;
    }
 
    .footer-desert-640 {

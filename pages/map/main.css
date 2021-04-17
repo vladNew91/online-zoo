@@ -68,21 +68,26 @@ header {
 
 /* map */
 main {
+   display: flex;
    width: 100%;
    height: 945px;
    background: #A7E1FF;
    font-size: 16px;
    line-height: 19px;
-   position: relative;
+}
+
+.wrapper__zoom {
+   position: absolute;
+   right: 20px;
+   top: 846px;
 }
 
 .zoom {
-   position: absolute;
    width: 30px;
    height: 80px;
    z-index: 2;
+   bottom: 380px;
    right: 20px;
-   bottom: 100px;
    background-color: #000000;
    border-radius: 5px;
    overflow: hidden;
@@ -345,7 +350,7 @@ footer {
 
 .y20-21 {
    margin-right: 207px;
-} 
+}
 /* END footer */
 
 @media (max-width: 1200px) {
@@ -367,8 +372,24 @@ footer {
 
    main {
       overflow: hidden;
-      overflow-x: auto;
+      /* overflow-x: auto; */
       height: 800px;
+      justify-content: center;
+   }
+
+   .wrapper__zoom {
+      display: flex;
+      max-height: 800px;
+      position: fixed;
+      right: 20px;
+      top: 700px;
+   }
+
+   .zoom {
+      min-width: 30px;
+      position: sticky;
+      bottom: unset;
+      top: 0;
    }
 
    .world-map {
@@ -376,39 +397,45 @@ footer {
       height: 600px;
    }
 
+   .map figure {
+      margin-left: 25px;
+   }
+
+   .USA {
+      top: 401px;
+      left: 183px;
+   }
+
+   .DRC {
+      top: 532px;
+      left: 423px;
+      width: 61px;
+      text-align: center;
+   }
+
+   .China {
+      top: 417px;
+      left: 687px;
+   }
+
    .eagle {
-      top: 429px;
-      left: 41px;
+      top: 411px;
+      left: 72px;
    }
 
    .allig {
-      top: 410px;
-      left: 244px;
+      top: 411px;
+      left: 270px;
    }
 
    .gorilla {
       top: 490px;
-      left: 525px;
+      left: 550px;
    }
 
    .panda {
-      top: 433px;
-      left: 760px;
-   }
-
-   .USA {
-      top: 400px;
-      left: 158px;
-   }
-
-   .DRC {
-      top: 530px;
-      left: 397px;
-   }
-
-   .China {
-      top: 420px;
-      left: 666px;
+      top: 404px;
+      left: 767px;
    }
 
    .tooltiptext {
@@ -434,10 +461,6 @@ footer {
       font-size: 18px;
       line-height: 21px;
       color: #000000;
-   }
-
-   .zoom {
-      right: calc(0vw + 20px);
    }
 
    /* footer */
@@ -519,6 +542,16 @@ footer {
    }
 }
 
+@media (width: 640px) {
+   main {
+      justify-content: unset;
+   }
+
+   .map {
+      left: -171px;
+   }
+}
+
 @media (max-width: 639px) {
    .header {
       justify-content: space-between;
@@ -541,198 +574,9 @@ footer {
       height: 22px;
    }
 
-   .watch-online {
-      width: 100%;
-      padding: 0 9px;
-      box-sizing: border-box;
+   .map {
+      left: 106px;
    }
-
-   .watch-online h2 {
-      width: 50%;
-      height: 300px;
-   }
-
-   .button-play {
-      width: 220px;
-   }
-
-   /* how it works */
-   .how-it-works {
-      background-position-y: 0px;
-      height: max-content;
-   }
-
-   .how-it-works__item {
-      width: 100%;
-      height: max-content;
-      margin-top: 100px;
-   }
-
-   .wrapper-slide {
-      height: 549px;
-      width: 100%;
-      margin-top: 29px;
-   }
-
-   .how-it-works__slider {
-      width: 320px;
-      height: 100%;
-      position: relative;
-   }
-
-   .slider-li-item {
-      width: 140px;
-      height: 215px;
-      position: absolute;
-   }
-
-   .leon-slide,
-   .monkey-slide {
-      width: 160px;
-   }
-
-   .elephant-slide {
-      display: none;
-   }
-
-   .eagle-slide {
-      top: 86px;
-      left: 150px;
-      z-index: 3;
-   }
-
-   .leon-slide {
-      top: 51px;
-      left: 10px;
-   }
-
-   .panda-slide {
-      bottom: 83px;
-      left: 30px;
-   }
-
-   .monkey-slide {
-      bottom: 48px;
-      left: 150px;
-   }
-
-   .centered-img {
-      object-fit: fill;
-   }
-
-   .how-it-works__item p {
-      width: calc(100% - 20px);
-      height: max-content;
-      margin: 32px 0 100px;
-   }
-   /* END how it works */
-
-   /* pets in zoo */
-   .btn-favorite {
-      width: 300px;
-   }
-
-   .card-animal {
-      width: 140px;
-   }
-
-   .alegator {
-      background-position: right;
-   }
-
-   .card-explanation {
-      width: 91px;
-      margin-left: 26px;
-   }
-
-   .pic {
-      width: calc(100% - 20px);
-      margin: 0 auto;
-   }
-   /* END pets in zoo */
-
-   /* pay and feed  */
-   .pay-and-feed {
-      height: 1372px;
-   }
-
-   .pay-and-feed__item {
-      width: 100%;
-      height: calc(100% - 200px);
-   }
-
-   .pay-block {
-      width: 320px;
-      margin-top: 80px;
-   }
-
-   .icon_margin {
-      margin-top: 95px;
-      margin-left: 0px;
-   }
-
-   .arrows_pay-640 {
-      display: none;
-   }
-
-   .arrows_pay-320 {
-      display: block;
-      position: absolute;
-      top: -100px;
-   }
-   /* END pay and feed  */
-
-   /* testimonials  */
-   .testimonials {
-      height: 1057px;
-   }
-
-   .testimonials__item {
-      height: calc(100% - 200px);
-   }
-
-   .testimonials__item h3 {
-      margin-left: 10px;
-   }
-
-   .testimonials-reviews {
-      height: 535px;
-   }
-
-   .testimonials-kard {
-      flex-direction: column;
-      padding: 0;
-      width: calc(100% - 20px);
-      height: max-content;
-      overflow: hidden;
-   }
-
-   .testimonials-kard__item {
-      margin: 0;
-      width: 100%;
-   }
-
-   .testimonials-kard__item:first-child {
-      height: 286px;
-   }
-
-   .testimonials-kard__item:not(:first-child) {
-      margin-top: 20px;
-   }
-
-   .new-posit {
-      top: 45px;
-   }
-
-   .testimonials-kard__item:nth-child(2) {
-      height: 229px;
-   }
-
-   .btn-feedback {
-      width: 226px;
-      margin-left: 11px;
-   }
-   /* END testimonials  */
 
    /* footer  */
    footer {
@@ -742,7 +586,8 @@ footer {
    .footer {
       height: 742px;
       width: 100%;
-      padding: 80px 10xp 20px;
+      padding-left: 10px;
+      padding-right: 10px;
    }
 
    .footer-desert-640 {

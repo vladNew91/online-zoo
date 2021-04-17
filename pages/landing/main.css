@@ -265,10 +265,14 @@
 .pic {
    width: 992px;
    display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.pic__item {
+   display: flex;
    flex-direction: row;
    justify-content: space-between;
-   flex-wrap: wrap;
-   align-content: space-between;
 }
 
 .card-row {
@@ -648,7 +652,6 @@ footer {
    .wrapper-slide {
       width: calc(100% - 30px);
       overflow: hidden;
-      overflow-x: auto;
    }
 
    .slider-li-item {
@@ -711,7 +714,7 @@ footer {
 
    .wrapper-slide {
       width: 100%;
-
+      justify-content: center;
    }
 
    .how-it-works {
@@ -742,17 +745,21 @@ footer {
       width: 601px;
       position: relative;
       margin: 0 auto;
-      overflow: hidden;
    }
 
    .card-animal {
       width: 187px;
       margin-top: 30px;
+      background-position: bottom;
    }
 
    .pic {
       overflow: hidden;
-      overflow-y: auto;
+      overflow-x: auto;
+   }
+
+   .pic__item {
+      width: 808px;
    }
 
    .slider-arrow {
@@ -1068,6 +1075,14 @@ footer {
    /* END how it works */
 
    /* pets in zoo */
+   .pets-in-zoo__item {
+      width: 100%;
+   }
+
+   .pic__item {
+      width: 620px;
+   }
+
    .btn-favorite {
       width: 300px;
    }
@@ -1078,6 +1093,10 @@ footer {
 
    .alegator {
       background-position: right;
+   }
+
+   .panda {
+      background-position: 10%;
    }
 
    .card-explanation {
@@ -1182,7 +1201,8 @@ footer {
    .footer {
       height: 742px;
       width: 100%;
-      padding: 80px 10xp 20px;
+      padding-left: 10px;
+      padding-right: 10px;
    }
 
    .footer-desert-640 {
