@@ -578,6 +578,11 @@ footer {
       left: 106px;
    }
 
+   .wrapper__zoom {
+      top: unset;
+      bottom: 20px;
+   }
+
    /* footer  */
    footer {
       height: max-content;
