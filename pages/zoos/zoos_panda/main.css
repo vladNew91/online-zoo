@@ -365,6 +365,7 @@ aside {
    left: 0px;
    top: 287px;
    background: url(../../../assets/images/aside-bg.png);
+   transition: all 0.3s ease;
 }
 
 .aside-container {
@@ -471,10 +472,6 @@ aside {
 
    .aside {
       left: -100%;
-   }
-
-   .hidden-aside {
-      opacity: 1;
    }
 
    .footer-desert {
@@ -651,12 +648,17 @@ aside {
       height: 306px;
    }
 
+   .panda-pay {
+      display: none;
+   }
+
    .show-aside-1200 {
       width: 45px;
       height: 45px;
       left: 0px;
       z-index: 2;
    }
+
    /* zoo */
    .zoo {
       width: 100%;
@@ -843,6 +845,11 @@ aside {
    .del-and {
       display: none;
    }
-
    /* END footer  */
+}
+
+.i-can-see-aside {
+   left: 0;
+   background-repeat: round;
+   top: 20vh;
 }

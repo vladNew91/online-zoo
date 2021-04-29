@@ -16,5 +16,6 @@ const btnShowAside = document.querySelector(".show-aside-1200");
 const aside = document.querySelector(".aside");
 
 btnShowAside.addEventListener("click", () => {
-   aside.classList.toggle("hidden-aside")
-})
+   aside.classList.add("i-can-see-aside");
+   setTimeout(() => aside.classList.remove("i-can-see-aside"), 6000);
+});
