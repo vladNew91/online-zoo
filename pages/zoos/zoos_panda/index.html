@@ -118,9 +118,12 @@
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write;
                      encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
+                  allowfullscreen
+               >
                </iframe>
-
+                  
+               <div class="wrapper-demo-video"></div>
+               
                <iframe
                   class="demo-video"
                   src="https://www.youtube.com/embed/nLoyN4gUkq4"
@@ -128,8 +131,11 @@
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write;
                      encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
+                  allowfullscreen
+               >
                </iframe>
+
+               <div class="wrapper-demo-video"></div>
 
                <iframe
                   class="demo-video"
@@ -141,6 +147,8 @@
                   allowfullscreen>
                </iframe>
 
+               <div class="wrapper-demo-video"></div>
+
                <iframe
                   class="demo-video"
                   src="https://www.youtube.com/embed/I-ovzUNno7g"
@@ -150,6 +158,44 @@
                      encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                </iframe>
+
+               <div class="wrapper-demo-video"></div>
+
+               <iframe
+                  class="demo-video"
+                  src="https://www.youtube.com/embed/r3eaGCk2Acs"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write;
+                     encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+               </iframe>
+
+               <div class="wrapper-demo-video"></div>
+
+               <iframe
+                  class="demo-video"
+                  src="https://www.youtube.com/embed/nLoyN4gUkq4"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write;
+                     encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+               </iframe>
+
+               <div class="wrapper-demo-video"></div>
+
+               <iframe
+                  class="demo-video"
+                  src="https://www.youtube.com/embed/I-ovzUNno7g"
+                  title="YouTube video player" 
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write;
+                     encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+               </iframe>
+
+               <div class="wrapper-demo-video"></div>
             </div>
             <!-- END Animal -->
 
@@ -166,66 +212,81 @@
                </div>
 
                <div class="info-blocks">
-                  <div class="info-blocks__item Population">
-                     <section class="trans-block">
-                        <h4>Population</h4>
+                  <div class="info-block-col">
+                     <div class="info-blocks__item Population">
+                        <div class="trans-block">
+                           <div class="info-string">
+                              <h4>Population</h4>
+                           </div>
+   
+                           <p class="info-description">
+                              There are only an estimated 1600 pandas in the wild and about
+                              325 in captivity.
+                           </p>
+                        </div>
+   
+                        <img 
+                           class="info-arrow"
+                           src="../../../assets/icons/Arrow-right.svg"
+                           alt="arrow"
+                        >
+                     </div>
 
-                        <p class="info-description">
-                           There are only an estimated 1600 pandas in the wild and about
-                           325 in captivity.
-                        </p>
-                     </section>
+                     <div class="info-blocks__item Nutrition">
+                        <section class="trans-block">
+                           <div class="info-string">
+                              <h4>Nutrition</h4>
+                           </div>
 
-                     <img 
-                        class="info-arrow"
-                        src="../../../assets/icons/Arrow-right.svg"
-                        alt="arrow"
-                     >
+                           <p class="info-description">
+                              Bamboo is indispensable for the big panda, 99% of their food is
+                              made up of shoots and leaves of the plant. Bamboo does not have
+                              a high nutritional value. And to meet the daily energy requirement,
+                              pandas need to eat between 23 and 40 kg of evergreen per day.
+                           </p>
+                        </section>
+                        <img class="info-arrow" src="../../../assets/icons/Arrow-right.svg" alt="arrow">
+                     </div>
                   </div>
 
-                  <div class="info-blocks__item Habitat">
-                     <section class="trans-block">
-                        <h4>Habitat</h4>
-                        <p class="info-description">
-                           Bamboo will occasionally «die off» forcing pandas to migrate
-                           to other areas to find enough bamboo. Today panda habitat is
-                           limited to the mountains in only a few provinces of southwestern
-                           China.
-                        </p>
-                     </section>
+                  <div class="info-block-col">
+                     <div class="info-blocks__item Habitat">
+                        <section class="trans-block">
+                           <div class="info-string">
+                              <h4>Habitat</h4>
+                           </div>
 
-                     <img 
-                        class="info-arrow" 
-                        src="../../../assets/icons/Arrow-right.svg" 
-                        alt="arrow"
-                     >
-                  </div>
-
-                  <div class="info-blocks__item Nutrition">
-                     <section class="trans-block">
-                        <h4>Nutrition</h4>
-                        <p class="info-description">
-                           Bamboo is indispensable for the big panda, 99% of their food is
-                           made up of shoots and leaves of the plant. Bamboo does not have
-                           a high nutritional value. And to meet the daily energy requirement,
-                           pandas need to eat between 23 and 40 kg of evergreen per day.
-                        </p>
-                     </section>
-                     <img class="info-arrow" src="../../../assets/icons/Arrow-right.svg" alt="arrow">
-                  </div>
-
-                  <div class="info-blocks__item Int-facts">
-                     <section class="trans-block">
-                        <h4>Interesting facts</h4>
-                        <p class="info-description">
-                           Pandas are slow moving and spend a considerable amount of time
-                           eating (16 — 24 hour period) and sleeping. Giant panda fur is coarse,
-                           dense and somewhat oily. Their coat keeps them warm in the cool moist
-                           climate of the mountain forests.
-                        </p>
-                     </section>
-                     <img class="info-arrow" src="../../../assets/icons/Arrow-right.svg" alt="arrow">
-                  </div>
+                           <p class="info-description">
+                              Bamboo will occasionally «die off» forcing pandas to migrate
+                              to other areas to find enough bamboo. Today panda habitat is
+                              limited to the mountains in only a few provinces of southwestern
+                              China.
+                           </p>
+                        </section>
+   
+                        <img 
+                           class="info-arrow" 
+                           src="../../../assets/icons/Arrow-right.svg" 
+                           alt="arrow"
+                        >
+                     </div>
+   
+                     <div class="info-blocks__item Int-facts">
+                        <section class="trans-block">
+                           <div class="info-string">
+                              <h4>Interesting facts</h4>
+                           </div>
+                           
+                           <p class="info-description">
+                              Pandas are slow moving and spend a considerable amount of time
+                              eating (16 — 24 hour period) and sleeping. Giant panda fur is coarse,
+                              dense and somewhat oily. Their coat keeps them warm in the cool moist
+                              climate of the mountain forests.
+                           </p>
+                        </section>
+                        <img class="info-arrow" src="../../../assets/icons/Arrow-right.svg" alt="arrow">
+                     </div>
+                  </div>                  
                </div>
             </div>
             <!-- ENDInformation -->

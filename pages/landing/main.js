@@ -17,7 +17,6 @@ carouselList.addEventListener('click', (e) => {
 
 const update = function(newActive) {
   const newActivePos = newActive.dataset.pos;
-
   const current = elems.find((elem) => elem.dataset.pos == 0);
   const prev = elems.find((elem) => elem.dataset.pos == -1);
   const next = elems.find((elem) => elem.dataset.pos == 1);
@@ -25,7 +24,6 @@ const update = function(newActive) {
   const last = elems.find((elem) => elem.dataset.pos == 2);
   
   current.classList.remove('carousel__item_active');
-  
   [current, prev, next, first, last].forEach(item => {
     let itemPos = item.dataset.pos;
 

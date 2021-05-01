@@ -71,7 +71,7 @@ header {
 main {
    width: 100%;
    margin: 0 auto;
-   height: 1550px;
+   height: max-content;
    font-style: normal;
    font-size: 16px;
    line-height: 19px;
@@ -80,7 +80,7 @@ main {
 .zoo {
    max-width: 1160px;
    height: 100%;
-   margin: 0 auto;
+   margin: 0 auto 100px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -102,17 +102,60 @@ main {
    display: none;
 }
 
-.demo-video {
-   width: 275px;
-   height: 155px;
-}
-
 .panda-cams {
    width: 100%;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
    margin-top: 20px;
+   overflow: hidden;
+   position: relative;
+}
+
+.demo-video {
+   margin-right: 20px;
+   position: relative;
+}
+
+.wrapper-demo-video {
+   position: absolute;
+   width: 275px;
+   height: 155px;
+   cursor: pointer;
+   top: 0;
+}
+
+.wrapper-demo-video:nth-child(2) {
+   left: 0;
+}
+
+.wrapper-demo-video:nth-child(4) {
+   left: 295px;
+}
+
+.wrapper-demo-video:nth-child(6) {
+   left: 590px;
+}
+
+.wrapper-demo-video:nth-child(8) {
+   right: 0;
+}
+
+.wrapper-demo-video:nth-child(10) {
+   right: -295px;
+}
+
+.wrapper-demo-video:nth-child(12) {
+   right: -590px;
+}
+
+.wrapper-demo-video:nth-child(14) {
+   right: -885px;
+}
+
+iframe {
+   width: 275px;
+   height: 155px;
 }
 
 .info-animal {
@@ -148,13 +191,16 @@ main {
 
 .info-blocks {
    width: 100%;
-   height: 304px;
    margin-top: 20px;
    display: flex;
    flex-direction: row;
-   flex-wrap: wrap;
    justify-content: space-between;
    align-content: space-between;
+}
+
+.info-block-col {
+   display: flex;
+   flex-direction: column;
 }
 
 .info-blocks__item {
@@ -165,6 +211,14 @@ main {
    padding: 20px 20px;
    display: flex;
    justify-content: space-between;
+   transition: all 0.5s ease;
+   overflow: hidden;
+   box-sizing: border-box;
+}
+
+.Population,
+.Habitat {
+   margin-bottom: 20px;
 }
 
 .trans-block h4 {
@@ -177,10 +231,23 @@ main {
 
 .trans-block {
    width: 470px;
+   position: relative;
+}
+
+.info-string {
+   width: 113%;
+   height: 40px;
+   top: 0;
+   cursor: pointer;
+   display: flex;
+}
+
+.qwerty {
+   align-items: center;
 }
 
 .info-description {
-   margin-top: 10px;
+   margin-top: -14px;
    width: 470px;
    letter-spacing: -0.05px;
 }
@@ -196,22 +263,22 @@ main {
 
 .info-arrow:hover {
    opacity: 0.8;
-   transition: all 0.5s ease;
 }
-/* JS */
+
 .hidden {
-   display: none;
+   opacity: 0;
 }
+
 .pwipebl {
    height: 61px;
    padding: 8px 20px;
    display: flex;
    align-items: center;
 }
+
 .info-arrow-rotate {
    transform: rotate(90deg);
 }
-/* JS */
 /* END zoo */
 
 /* footer */
@@ -535,11 +602,16 @@ aside {
    .info-blocks {
       height: max-content;
       margin: 0;
+      flex-wrap: wrap;
    }
 
    .info-blocks__item {
       width: 100%;
       margin-top: 20px;
+   }
+
+   .info-block-col {
+      width: 100%;
    }
 
    /* footer */
