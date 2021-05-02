@@ -34,3 +34,85 @@ demoVideoWrappers.forEach((wrap,i) => {
       demoVideos[i].src = a;
    });
 });
+
+//modal window 1,2
+const modal = document.querySelector(".modal");
+const modal1 = document.querySelector(".modal-1");
+const modal2 = document.querySelector(".modal-2");
+const btnDonate = document.querySelector(".footer-top .btn-favorite");
+const modalClose = document.querySelector(".modal-close");
+const btnNext = document.querySelector(".modal-btn-next");
+const amount = document.querySelector(".modal-amount-money");
+const btnModalDonate = document.querySelector(".modal-btn-donate");
+const cardNumber = document.querySelector(".card-number");
+const modalMM = document.querySelector(".modal-mm");
+const modalYY = document.querySelector(".modal-yy");
+const modalCVC = document.querySelector(".modal-cvc");
+
+btnDonate.addEventListener("click", () => {
+  modal.style.display = "flex";
+  modal1.style.display = "flex";
+  modal2.style.display = "none";
+});
+
+modalClose.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  return e.target == modal ? modal.style.display = "none" : false;
+});
+
+//button next
+btnNext.addEventListener("click", () => {
+  if (amount.value == "") {
+    btnNext.disabled = true;
+    amount.placeholder = "You did not indicate the amount";
+  } else {
+    modal1.style.display = "none",
+    modal2.style.display = "flex";
+    console.log(amount.value)
+  }
+});
+
+//limitation amount money
+amount.oninput = () => {
+  return amount.value.length > 4 ? 
+    amount.value = amount.value.slice(0,4) : false;
+};
+
+//limitation card number
+cardNumber.oninput = () => {
+  return cardNumber.value.length > 16 ? 
+  cardNumber.value = cardNumber.value.slice(0,16) : false;
+};
+
+//limitation modal-mm
+modalMM.oninput = () => {
+  return modalMM.value.length > 2 ? 
+  modalMM.value = modalMM.value.slice(0,2) : false;
+};
+
+//limitation modal-yy
+modalYY.oninput = () => {
+  return modalYY.value.length > 2 ? 
+  modalYY.value = modalYY.value.slice(0,2) : false;
+};
+
+//limitation modal-cvc
+modalCVC.oninput = () => {
+  return modalCVC.value.length > 3 ? 
+  modalCVC.value = modalCVC.value.slice(0,3) : false;
+};
+
+//button modal-btn-donate
+btnModalDonate.addEventListener("click", () => {
+  if (cardNumber.value == "" || modalMM.value == "" || 
+      modalYY.value == "" || modalCVC.value == "") {
+        btnModalDonate.disabled = true;
+        cardNumber.placeholder = "You did not indicate the card number";
+  } else {
+    modal.style.display = "none";
+    alert("Thank you for your donation")
+  }
+});

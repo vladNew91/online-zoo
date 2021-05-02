@@ -292,6 +292,84 @@
             <!-- ENDInformation -->
          </section>
       </main>
+      
+      <form action="" class="modal">
+         <div id="modal-1" class="modal-1">
+            <span class="modal-close">&times;</span>
+
+            <select class="dropdown">
+               <option>Panda</option>
+               <option>Alligator</option>
+               <option>Eagle</option>
+               <option>Gorilla</option>
+            </select>
+
+         <div class="modal-amount">
+            <input
+               type="number"
+               class="modal-amount-money"
+               placeholder="Amount"
+            >
+
+            <select class="modal-amount-usd">
+               <option>USD</option>
+               <option>EUR</option>
+            </select>
+         </div>
+
+         <textarea
+            class="modal-text"
+            maxlength="280"
+            placeholder="Your text here"
+         ></textarea>
+
+         <a href="#modal-2" class="btn-donate modal-btn-next">
+            <h4>Next</h4>
+         </a>
+         </div>
+
+         <div class="modal-2">
+            <div class="card-face">
+               <input
+                  class="card-number"
+                  type="number"
+                  placeholder="Сard Number"
+               >
+
+               <div class="modal-2-mm-yy">
+                  <input
+                     class="modal-mm"
+                     type="number"
+                     placeholder="MM"
+                  
+                     >
+                  <input
+                     class="modal-yy"
+                     type="number" 
+                     placeholder="YY"
+                  >
+               </div>
+
+               <input
+                  class="card-number cardholder-name"
+                  type="text"
+                  placeholder="Сardholder Name"
+               >
+            </div>
+
+            <div class="card-back">
+               <input
+                  type="number"
+                  class="modal-cvc"
+                  placeholder="CVC"
+               >
+            </div>
+
+            <a class="btn-donate modal-btn-donate">
+               <h4>Donate</h4>
+            </a>
+         </div>
+      </form>
 
       <footer>
          <img 
@@ -312,7 +390,7 @@
                   <img src="../../../assets/icons/logo.svg" alt="logo" class="logo-footer">
                </a>
 
-               <a type="button" class="btn-donate btn-volont btn-favorite">
+               <a href="#modal-1" class="btn-donate btn-volont btn-favorite">
                   Donate for volunteers
                </a>
 

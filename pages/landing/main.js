@@ -107,8 +107,8 @@ modalYY.oninput = () => {
 
 //limitation modal-cvc
 modalCVC.oninput = () => {
-  return modalCVC.value.length > 2 ? 
-  modalCVC.value = modalCVC.value.slice(0,2) : false;
+  return modalCVC.value.length > 3 ? 
+  modalCVC.value = modalCVC.value.slice(0,3) : false;
 };
 
 //button modal-btn-donate
