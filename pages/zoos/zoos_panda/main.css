@@ -232,14 +232,8 @@ iframe {
 .trans-block {
    width: 470px;
    position: relative;
-}
-
-.info-string {
-   width: 113%;
-   height: 40px;
-   top: 0;
-   cursor: pointer;
    display: flex;
+   flex-direction: column;
 }
 
 .qwerty {
@@ -247,7 +241,7 @@ iframe {
 }
 
 .info-description {
-   margin-top: -14px;
+   margin-top: 14px;
    width: 470px;
    letter-spacing: -0.05px;
 }
@@ -258,6 +252,7 @@ iframe {
    transform: rotate(-90deg);
    margin: auto 0;
    transition: all 0.5s ease;
+   cursor: pointer;
 }
 
 .info-arrow:hover {
@@ -421,6 +416,7 @@ footer {
 /* aside */
 .show-aside-1200 {
    display: none;
+   cursor: pointer;
 }
 
 aside {

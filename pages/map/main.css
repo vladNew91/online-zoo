@@ -75,12 +75,18 @@ main {
    background: #A7E1FF;
    font-size: 16px;
    line-height: 19px;
+   overflow: hidden;
+   position: relative;
+   justify-content: center;
+   padding-top: 100px;
+   box-sizing: border-box;
 }
 
 .wrapper__zoom {
    position: absolute;
    right: 20px;
    top: 846px;
+   z-index: 1;
 }
 
 .zoom {
@@ -119,13 +125,14 @@ main {
 }
 
 .map {
-   width: max-content;
    position: relative;
-   margin: 0 auto;
+   transition: all 0.5s ease;
 }
 
-.world-map {
-   margin-top: 100px;
+.world-map-items {
+   width: 100%;
+   height: 100%;
+   z-index: 1;
 }
 
 .animal-on-map {
@@ -353,6 +360,242 @@ footer {
    margin-right: 207px;
 }
 /* END footer */
+
+/* Modal */
+.modal,
+.modal-1,
+.modal-2 {
+   justify-content: center;
+   align-items: center;
+}
+
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 5;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(0,0,0,0.4);
+   -webkit-animation-name: fadeIn;
+   -webkit-animation-duration: 0.4s;
+   animation-name: fadeIn;
+   animation-duration: 0.4s
+}
+
+.modal-1,
+.dropdown,
+.modal-amount-money,
+.modal-amount-usd,
+.modal-text,
+.modal-2,
+.modal-mm,
+.modal-yy,
+.modal-cvc,
+.card-face,
+.card-number {
+   box-sizing: border-box;
+   border: 1px solid #9CA498;
+}
+
+.modal-1,
+.modal-2 {
+   -webkit-animation-name: slideIn;
+   -webkit-animation-duration: 0.4s;
+   animation-name: slideIn;
+   animation-duration: 0.4s
+}
+
+.modal-1 {
+   display: flex;
+   flex-direction: column;
+   width: 630px;
+   height: 339px;
+   padding: 60px 80px 40px;
+   font-size: 16px;
+   line-height: 19px;
+   background: #ffffff;
+   position: relative;
+   border: none;
+}
+
+.modal-close {
+   position: absolute;
+   font-size: 60px;
+   right: 15px;
+   font-weight: 100;
+   top: 15px;
+}
+ 
+.modal-close:hover {
+   cursor: pointer;
+}
+
+.dropdown,
+.modal-amount,
+.modal-amount-money,
+.modal-amount-usd,
+.card-number,
+.modal-mm,
+.modal-yy {
+   height: 39px;
+}
+
+.dropdown {
+   width: 100%;
+   background: #DFF5B0;
+   padding-left: 43%;
+}
+
+option {
+   text-align-last: center;
+}
+
+.modal-amount {
+   width: 100%;
+   display: flex;
+   margin: 8px 0;
+}
+
+.modal-amount-money {
+   width: 303px;
+   margin-right: 8px;
+   text-align: left;
+   padding-left: 11px;
+}
+
+.modal-amount-usd {
+   width: 159px;
+   padding-left: 12%;
+   background: #fff;
+}
+
+.modal-text {
+   height: 85px;
+   width: 100%;
+   padding: 8px 11px;
+   resize: none;
+}
+
+.modal-btn-next {
+   width: 168px;
+   height: 40px;
+   margin: 20px auto 0;
+}
+
+.dropdown,
+.modal-amount-money,
+.modal-amount-usd,
+.modal-text,
+.card-number,
+.modal-mm,
+.modal-yy,
+.modal-cvc {
+   outline: none;
+}
+
+.modal-2 {   
+   display: none;
+   flex-direction: column;
+   width: 630px;
+   height: 389px;
+   border: none;
+   padding: 60px 80px 40px;
+   font-size: 16px;
+   line-height: 19px;
+   background: #ffffff;
+   position: relative;
+}
+
+.card-face {
+   position: absolute;
+   width: 358px;
+   height: 203px;
+   left: 50px;
+   top: 50px;
+   background: #DCDCDC;
+   border-radius: 10px;
+   z-index: 1;
+   padding: 35px 26px;
+   border: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.card-number,
+.modal-mm,
+.modal-yy,
+.modal-cvc {
+   text-align: center;
+}
+
+.card-number {
+   width: 306px;
+}
+
+.modal-2-mm-yy {
+   display: flex;
+   flex-direction: row;
+}
+
+.modal-mm,
+.modal-yy {
+   width: 80px;
+}
+
+.modal-mm {
+   margin-right: 5px;
+}
+
+.card-back {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   background: url(../../../assets/images/Pay_2.png);
+}
+
+.modal-cvc {
+   position: absolute;
+   width: 75px;
+   height: 35px;
+   left: 469px;
+   top: 173px;
+}
+
+.modal-btn-donate {
+   width: 150px;
+   height: 40px;
+   position: absolute;
+   bottom: 40px;
+   margin: 0;
+   cursor: pointer;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+   from {top: 300px; opacity: 0} 
+   to {top: 0; opacity: 1}
+}
+ 
+@keyframes slideIn {
+   from {top: -300px; opacity: 0}
+   to {top: 0; opacity: 1}
+}
+ 
+@-webkit-keyframes fadeIn {
+   from {opacity: 0} 
+   to {opacity: 1}
+}
+ 
+@keyframes fadeIn {
+   from {opacity: 0} 
+   to {opacity: 1}
+}
+/* END Modal */
 
 @media (max-width: 1200px) {
    .footer-desert {

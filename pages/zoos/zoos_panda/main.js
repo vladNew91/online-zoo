@@ -1,16 +1,16 @@
 //info blocks
-const swipeBloks = document.querySelectorAll(".info-string");
+const btnShowInfo = document.querySelectorAll(".info-arrow");
 const transitBloks = document.querySelectorAll(".info-blocks__item");
 const hiddenBloks = document.querySelectorAll('.info-description');
 const infoArrowRotate = document.querySelectorAll('.info-arrow');
 
-swipeBloks.forEach((el, i) => {
-   el.addEventListener('click', () => {
-      swipeBloks[i].classList.toggle("qwerty");
-      hiddenBloks[i].classList.toggle('hidden');
-      transitBloks[i].classList.toggle('pwipebl', );
-      infoArrowRotate[i].classList.toggle('info-arrow-rotate');
-   })
+btnShowInfo.forEach((el, i) => {
+  el.addEventListener('click', () => {
+    btnShowInfo[i].classList.toggle("qwerty");
+    hiddenBloks[i].classList.toggle('hidden');
+    transitBloks[i].classList.toggle('pwipebl', );
+    infoArrowRotate[i].classList.toggle('info-arrow-rotate');
+  });
 })
 
 // aside
@@ -39,7 +39,7 @@ demoVideoWrappers.forEach((wrap,i) => {
 const modal = document.querySelector(".modal");
 const modal1 = document.querySelector(".modal-1");
 const modal2 = document.querySelector(".modal-2");
-const btnDonate = document.querySelector(".footer-top .btn-favorite");
+const btnDonate = document.querySelectorAll(".pay-action");
 const modalClose = document.querySelector(".modal-close");
 const btnNext = document.querySelector(".modal-btn-next");
 const amount = document.querySelector(".modal-amount-money");
@@ -49,11 +49,13 @@ const modalMM = document.querySelector(".modal-mm");
 const modalYY = document.querySelector(".modal-yy");
 const modalCVC = document.querySelector(".modal-cvc");
 
-btnDonate.addEventListener("click", () => {
-  modal.style.display = "flex";
-  modal1.style.display = "flex";
-  modal2.style.display = "none";
-});
+btnDonate.forEach(btn => {
+  btn.addEventListener("click", () => {
+    modal.style.display = "flex";
+    modal1.style.display = "flex";
+    modal2.style.display = "none";
+  });
+})
 
 modalClose.addEventListener("click", () => {
   modal.style.display = "none";

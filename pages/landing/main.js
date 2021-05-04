@@ -11,7 +11,6 @@ carouselList.addEventListener('click', (e) => {
   if (!isItem || newActive.classList.contains('carousel__item_active')) {
     return;
   };
-  
   update(newActive);
 });
 
@@ -20,11 +19,13 @@ const update = function(newActive) {
   const current = elems.find((elem) => elem.dataset.pos == 0);
   const prev = elems.find((elem) => elem.dataset.pos == -1);
   const next = elems.find((elem) => elem.dataset.pos == 1);
-  const first = elems.find((elem) => elem.dataset.pos == -2);
-  const last = elems.find((elem) => elem.dataset.pos == 2);
+  const dowbleNext = elems.find((elem) => elem.dataset.pos == -2);
+  const dowbleLast = elems.find((elem) => elem.dataset.pos == 2);
+  const first = elems.find((elem) => elem.dataset.pos == -3);
+  const last = elems.find((elem) => elem.dataset.pos == 3);
   
   current.classList.remove('carousel__item_active');
-  [current, prev, next, first, last].forEach(item => {
+  [current, prev, next, dowbleNext, dowbleLast, first, last].forEach(item => {
     let itemPos = item.dataset.pos;
 
     item.dataset.pos = getPos(itemPos, newActivePos)
@@ -34,10 +35,9 @@ const update = function(newActive) {
 const getPos = function (current, active) {
   const diff = current - active;
 
-  if (Math.abs(current - active) > 2) {
+  if (Math.abs(current - active) > 3) {
     return -current
   }
-
   return diff;
 };
 

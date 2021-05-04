@@ -190,51 +190,73 @@
 }
 
 .carousel__item:nth-child(1) {
-   background: url(../../assets/images/mightyEeagle.png);
+   background: url(../../assets/images/bear-card.png);
+   background-size: contain;
 }
 
 .carousel__item:nth-child(2) {
-   background: url(../../assets/images/lion.png);
+   background: url(../../assets/images/mightyEeagle.png);
 }
 
 .carousel__item:nth-child(3) {
-   background: url(../../assets/images/panda.png);
+   background: url(../../assets/images/lion.png);
 }
 
 .carousel__item:nth-child(4) {
-   background: url(../../assets/images/monkey.png);
+   background: url(../../assets/images/panda.png);
 }
 
 .carousel__item:nth-child(5) {
+   background: url(../../assets/images/monkey.png);
+}
+
+.carousel__item:nth-child(6) {
    background: url(../../assets/images/elephant.png);
 }
 
+.carousel__item:nth-child(7) {
+   background: url(../../assets/images/pingvin-card.png);
+   background-size: contain;
+}
+
 .carousel__item[data-pos="0"] {
-   z-index: 5;
+   z-index: 6;
 }
 
 .carousel__item[data-pos="-1"], .carousel__item[data-pos="1"] {
-   z-index: 4;
+   z-index: 5;
 }
 
 .carousel__item[data-pos="-1"] {
-   transform: translateX(-85%) scale(0.89);
+   transform: translateX(-71%) scale(0.89);
 }
 
 .carousel__item[data-pos="1"] {
-   transform: translateX(85%) scale(0.89);
+   transform: translateX(71%) scale(0.89);
 }
 
 .carousel__item[data-pos="-2"], .carousel__item[data-pos="2"] {
+   z-index: 4;
+}
+
+.carousel__item[data-pos="-3"], .carousel__item[data-pos="3"] {
    z-index: 3;
 }
 
 .carousel__item[data-pos="-2"] {
-   transform: translateX(-156%) scale(0.79);
+   transform: translateX(-128%) scale(0.79);
 }
 
 .carousel__item[data-pos="2"] {
-   transform: translateX(156%) scale(0.79);
+   transform: translateX(128%) scale(0.79);
+}
+
+.carousel__item[data-pos="-3"] {
+   transform: translateX(-174%) scale(0.69);
+}
+
+.carousel__item[data-pos="3"] {
+   transform: translateX(174%) scale(0.69);
 }
 /* END slider how it works */
 
