@@ -181,72 +181,81 @@ btnModalDonate.addEventListener("click", () => {
         cardNumber.placeholder = "You did not indicate the card number";
   } else {
     modal.style.display = "none";
-    alert("Thank you for your donation")
-  }
+    alert("Thank you for your donation");
+  };
 });
 
 //map
-const myImg = document.querySelector(".world-map");
-const parentMyImg = document.querySelector("main");
-
-function zoomin() {
-  let currWidth = myImg.clientWidth;
-  if (currWidth > 2500) return;
-  else {
-    myImg.style.width = (currWidth * 1.15) + "px";
-  }
-}
-
-function zoomout() {
-  let currWidth = myImg.clientWidth;
-  
-  if (currWidth < 1100) {
-    myImg.style.top = "calc((100% - 647px) / 2)";
-    myImg.style.left = "calc((100% - 1100px) / 2)";
-    return;
-  }
-  else {
-    myImg.style.width = (currWidth - 100) + "px";
-  }
-}
-
-//drag
-const mapImage = document.querySelector(".world-map");
+const mapImage = document.querySelector(".map");
+const mapItems = document.querySelector(".world-map-items");
 const mapParent = document.querySelector("main");
 
-function getCoords(elem) {
+const zoomIn = () => {
+  let currWidthImage = mapImage.clientWidth;
+  let currWidthItems = mapItems.clientWidth;
+  let currHeightItems = mapItems.clientHeight;
+
+  if (currWidthImage > 2000) return;
+
+  mapImage.style.width = (currWidthImage * 1.15) + "px";
+  mapItems.style.width = (currWidthItems * 1.15) + "px";
+  mapItems.style.height = (currHeightItems * 1.15) + "px";
+};
+
+const zoomOut = () => {
+  let currWidthImage = mapImage.clientWidth;
+  let currWidthItems = mapItems.clientWidth;
+  let currHeightItems = mapItems.clientHeight;
+
+  if (currWidthImage < 1170) {
+    mapImage.style.top = "calc((100% - 747px) / 2)";
+    mapImage.style.left = "calc((100% - 1162px) / 2)";
+    mapImage.style.width = "1162px";
+    mapItems.style.width = "1162px";
+    mapItems.style.height = "747px";
+    return;
+  };
+
+  mapImage.style.width = (currWidthImage / 1.15) + "px";
+  mapItems.style.width = (currWidthItems / 1.15) + "px";
+  mapItems.style.height = (currHeightItems / 1.15) + "px";
+};
+
+//drag & drop
+const getCoords = (elem) => {
   let box = elem.getBoundingClientRect();
-  console.log(box)
   return {
     top: box.top + pageYOffset,
     left: box.left + pageXOffset
   };
-}
+};
 
 mapImage.addEventListener("mousedown", (e) => {
-  let coords = getCoords(mapImage);
+  const coords = getCoords(mapImage);
   let shiftX = e.pageX - coords.left;
-  let shiftY = e.pageY - coords.top;
+  let shiftY = e.pageY - coords.top + 80;
 
-  mapImage.style.position = 'absolute';
-  mapParent.appendChild(mapImage);
-  moveAt(e);
-
-  function moveAt(e) {
+  const moveAt = (e) => {
     mapImage.style.left = e.pageX - shiftX + 'px';
     mapImage.style.top = e.pageY - shiftY + 'px';
   }
 
-  document.onmousemove = function(e) {
+  moveAt(e);
+
+  document.onmousemove = (e) => {
     moveAt(e);
   };
 
-  mapImage.onmouseup = function() {
+  mapImage.onmouseup = () => {
     document.onmousemove = null;
     mapImage.onmouseup = null;
   };
 });
 
-mapImage.ondragstart = function() {
-  return false;
+mapParent.onmouseover = () => {
+  mapImage = null;
+};
+
+mapImage.ondragstart = () => {
+  return;
 };
