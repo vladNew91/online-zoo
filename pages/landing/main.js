@@ -128,38 +128,38 @@ let items = document.querySelectorAll('.carousel-HIW .item');
 let currentItem = 0;
 let isEnabled = true;
 
-function changeCurrentItem(n) {
+const changeCurrentItem = (n) => {
 	currentItem = (n + items.length) % items.length;
-}
+};
 
-function hideItem(direction) {
+const hideItem = (direction) => {
 	isEnabled = false;
 	items[currentItem].classList.add(direction);
 	items[currentItem].addEventListener('animationend', function() {
 		this.classList.remove('active', direction);
 	});
-}
+};
 
-function showItem(direction) {
+const showItem = (direction) => {
 	items[currentItem].classList.add('next', direction);
 	items[currentItem].addEventListener('animationend', function() {
 		this.classList.remove('next', direction);
 		this.classList.add('active');
 		isEnabled = true;
 	});
-}
+};
 
-function nextItem(n) {
+const nextItem = (n) => {
 	hideItem('to-left');
 	changeCurrentItem(n + 1);
 	showItem('from-right');
-}
+};
 
-function previousItem(n) {
+const previousItem = (n) => {
 	hideItem('to-right');
 	changeCurrentItem(n - 1);
 	showItem('from-left');
-}
+};
 
 document.querySelector('.control.left').addEventListener('click', function() {
 	if (isEnabled) {
@@ -173,5 +173,7 @@ document.querySelector('.control.right').addEventListener('click', function() {
 	}
 });
 
-var el = document.querySelector('.carousel-HIW');
+let el = document.querySelector('.carousel-HIW');
 swipedetect(el);
+
+//testimonials slider
