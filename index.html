@@ -4,12 +4,11 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="./assets/icons/site_icon.png" type="image/x-icon">
    <title>online-zoo</title>
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" 
       rel="stylesheet">
-   <link href="//db.onlinewebfonts.com/c/151212d9a9d1e632aa020562ae4ea050?family=SceneW01-Black" 
-      rel="stylesheet"/>
    <link rel="stylesheet" href="./pages/normalize.css">
    <link rel="stylesheet" href="./pages/landing/main.css">
 </head>
@@ -20,7 +19,11 @@
          <header class="header">
             <figure>
                <a href="#">
-                  <img src="./assets/icons/logo.svg" alt="logo">
+                  <img
+                     src="./assets/icons/logo.svg"
+                     alt="logo"
+                     class="header-logo"
+                  >
                </a>
                <h1 class="hidden">Online Zoo</h1>
             </figure>
@@ -52,7 +55,30 @@
                   </li>
                </ul>
             </nav>
+
+            <img
+               src="./assets/icons/burger.svg"
+               alt="burger"
+               class="burger"
+            >
          </header>
+
+         <div class="burger-list">
+            <nav class="nav-burger">
+               <ul>
+                  <li><a class="burger-link">Main</a></li>
+               </ul>
+               <ul>
+                  <li><a class="burger-link" href="./pages/map/index.html">Map</a></li>
+               </ul>
+               <ul>
+                  <li><a class="burger-link" href="./pages/zoos/zoos_panda/index.html">Zoos</a></li>
+               </ul>
+               <ul>
+                  <li><a class="burger-link" href="./pages/page404/index.html">Contact</a></li>
+               </ul>
+            </nav>
+         </div>
 
          <section class="watch-online">
             <h2>Watch your favorite animal ONLINE</h2>
@@ -68,17 +94,17 @@
          <section class="how-it-works__item">
             <h3>How it works</h3>
 
-            <ul class="how-it-works__slider">
-               <li class="slider-li-item eagle-slide"></li>
-
-               <li class="slider-li-item leon-slide size2"></li>
-
-               <li class="slider-li-item panda-slide size3"></li>
-
-               <li class="slider-li-item monkey-slide size2"></li>
-
-               <li class="slider-li-item elephant-slide"></li>
-            </ul>
+            <div class="carousel">
+               <ul class="carousel__list">
+                  <li class="carousel__item" data-pos="-3"></li>
+                  <li class="carousel__item" data-pos="-2"></li>
+                  <li class="carousel__item" data-pos="-1"></li>
+                  <li class="carousel__item" data-pos="0"></li>
+                  <li class="carousel__item" data-pos="1"></li>
+                  <li class="carousel__item" data-pos="2"></li>
+                  <li class="carousel__item" data-pos="3"></li>
+               </ul>
+            </div>
 
             <p>The application Оnline zoo will allow you to watch zoos' 
                and nature reserves' inhabitants in live. Currently, under 
@@ -100,49 +126,114 @@
          <section class="pets-in-zoo__item">
             <h3>Pets in zoo</h3>
 
-            <div class="pictures__slider">
-               <img src="../../assets/icons/Arrow-left.svg" 
+            <div class="wrapper-carousel-HIW">
+               <div class="carousel-HIW">
+                  <img
+                        src="../../assets/icons/Arrow-left.svg"
+                        alt="arrow-left"
+                        class="control arrow left"
+                     >
+
+                  <div class="items-container">
+                     <div class="item active">
+                        <div class="pic">
+                           <div class="pic__item">
+                              <a href="./pages/zoos/zoos_panda/index.html" class="panda card-animal">
+                                 <h4 class="card-explanation">Panda, China</h4>
+                              </a>
+            
+                              <a href="./pages/zoos/zoos_alig/index.html" class="alegator card-animal">
+                                 <h4 class="card-explanation">Alligator, USA</h4>
+                              </a>
+            
+                              <a href="./pages/zoos/zoos_gorilla/index.html" class="garilla card-animal">
+                                 <h4 class="card-explanation">Gorilla, Eastern DRC</h4>
+                              </a>
+            
+                              <a class="elephant card-animal">
+                                 <h4 class="card-explanation">Elephant, South Africa</h4>
+                              </a>                     
+                           </div>
+         
+                           <div class="pic__item">
+                              <a class="bear card-animal">
+                                 <h4 class="card-explanation">Polar bear, Canada</h4>
+                              </a>
+            
+                              <a href="./pages/zoos/zoos_eagle/index.html" class="eagle card-animal">
+                                 <h4 class="card-explanation">Bald eagle, USA</h4>
+                              </a>
+            
+                              <a class="owl card-animal">
+                                 <h4 class="card-explanation">Arctic snowy owl, Alaska</h4>
+                              </a>
+            
+                              <a class="pingvin card-animal">
+                                 <h4 class="card-explanation">Penguin, USA</h4>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                    
+                     <div class="item">
+                        <div class="pic">         
+                           <div class="pic__item">            
+                              <a href="./pages/zoos/zoos_eagle/index.html" class="eagle card-animal">
+                                 <h4 class="card-explanation">Bald eagle, USA</h4>
+                              </a>
+
+                              <a class="bear card-animal">
+                                 <h4 class="card-explanation">Polar bear, Canada</h4>
+                              </a>
+            
+                              <a class="pingvin card-animal">
+                                 <h4 class="card-explanation">Penguin, USA</h4>
+                              </a>
+            
+                              <a class="owl card-animal">
+                                 <h4 class="card-explanation">Arctic snowy owl, Alaska</h4>
+                              </a>
+                           </div>
+
+                           <div class="pic__item">            
+                              <a class="elephant card-animal">
+                                 <h4 class="card-explanation">Elephant, South Africa</h4>
+                              </a>   
+            
+                              <a href="./pages/zoos/zoos_alig/index.html" class="alegator card-animal">
+                                 <h4 class="card-explanation">Alligator, USA</h4>
+                              </a>
+                              
+                              <a href="./pages/zoos/zoos_panda/index.html" class="panda card-animal">
+                                 <h4 class="card-explanation">Panda, China</h4>
+                              </a>
+            
+                              <a href="./pages/zoos/zoos_gorilla/index.html" class="garilla card-animal">
+                                 <h4 class="card-explanation">Gorilla, Eastern DRC</h4>
+                              </a>                  
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <img
+                     src="../../assets/icons/Arrow-right.svg"
+                     alt="arrow-right"
+                     class="control arrow right"
+                  >
+               </div>
+            </div>
+
+            <div class="arrows-640">
+               <img
+                  src="../../assets/icons/Arrow-left.svg"
                   alt="arrow-left"
-                  class="slider-arrow"
                >
 
-               <div class="pic">
-                  <a href="./pages/zoos/zoos_panda/index.html" class="panda card-animal">
-                     <h4 class="card-explanation">Panda, China</h4>
-                  </a>
-
-                  <a href="./pages/zoos/zoos_alig/index.html" class="alegator card-animal">
-                     <h4 class="card-explanation">Alligator, USA</h4>
-                  </a>
-
-                  <a href="./pages/zoos/zoos_gorilla/index.html" class="garilla card-animal">
-                     <h4 class="card-explanation">Gorilla, Eastern DRC</h4>
-                  </a>
-
-                  <a class="elephant card-animal">
-                     <h4 class="card-explanation">Elephant, South Africa</h4>
-                  </a>
-
-                  <a class="bear card-animal">
-                     <h4 class="card-explanation">Polar bear, Canada</h4>
-                  </a>
-
-                  <a href="./pages/zoos/zoos_eagle/index.html" class="eagle card-animal">
-                     <h4 class="card-explanation">Bald eagle, USA</h4>
-                  </a>
-
-                  <a class="owl card-animal">
-                     <h4 class="card-explanation">Arctic snowy owl, Alaska</h4>
-                  </a>
-
-                  <a class="pingvin card-animal">
-                     <h4 class="card-explanation">Penguin, USA</h4>
-                  </a>
-               </div>
-
-               <img src="../../assets/icons/Arrow-right.svg" 
+               <img
+                  src="../../assets/icons/Arrow-right.svg"
                   alt="arrow-right"
-                  class="slider-arrow">
+               >
             </div>
 
             <a href="./pages/map/index.html" type="button" class="btn-favorite">
@@ -180,6 +271,14 @@
             <figure class="arrows_pay">
                <img src="../../assets/icons/Arrow_pay.svg" alt="Arrow_pay">
             </figure>
+
+            <figure class="arrows_pay-640">
+               <img src="./assets/icons/Arrow-pay-640.png" alt="Arrow_pay">
+            </figure>
+
+            <figure class="arrows_pay-320">
+               <img src="./assets/icons/arrows-Pay&feed-320.png" alt="Arrow_pay">
+            </figure>
          </section>
       </div>
 
@@ -197,8 +296,8 @@
                   <div class="testimonials-kard__item">
                      <img src="../../assets/icons/Karen.png" alt="Karen">
                      <h4 class="donat-name">Karen Maitland</h4>
-                     <img src="../../assets/icons/money.svg" alt="money" class="donat-coin">
-                     <h4 class="donat-cash">+$10</h4>
+                     <img src="../../assets/icons/money.svg" alt="money" class="donat-coin new-posit">
+                     <h4 class="donat-cash new-posit">+$10</h4>
                      <p class="donat-feedback">
                         "Thank you so much for these wonderful live webcams 
                         of the eagles on Catalina Island. Being able to watch 
@@ -256,21 +355,106 @@
                >
             </div>
 
+            <div class="arrows-640">
+               <img src="../../assets/icons/Arrow-left.svg" alt="arrow-left">
+               <img src="../../assets/icons/Arrow-right.svg" alt="arrow-right">
+            </div>
+
             <a type="button" class="btn-favorite btn-feedback">
                <h4>Leave feedback</h4>
             </a>
          </section>
       </div>
+      
+      <form action="" class="modal">
+         <div class="modal-1">
+            <span class="modal-close">&times;</span>
+
+            <select class="dropdown">
+               <option>Alligator</option>
+               <option>Panda</option>
+               <option>Eagle</option>
+               <option>Gorilla</option>
+            </select>
+
+         <div class="modal-amount">
+            <input
+               type="number"
+               class="modal-amount-money"
+               placeholder="Amount"
+            >
+
+            <select class="modal-amount-usd">
+               <option>USD</option>
+               <option>EUR</option>
+            </select>
+         </div>
+
+         <textarea
+            class="modal-text"
+            maxlength="280"
+            placeholder="Your text here"
+         ></textarea>
+
+         <a href="#modal-2" class="btn-favorite modal-btn-next">
+            <h4>Next</h4>
+         </a>
+         </div>
+
+         <div class="modal-2">
+            <div class="card-face">
+               <input
+                  class="card-number"
+                  type="number"
+                  placeholder="Сard Number"
+               >
+
+               <div class="modal-2-mm-yy">
+                  <input
+                     class="modal-mm"
+                     type="number"
+                     placeholder="MM"
+                  
+                     >
+                  <input
+                     class="modal-yy"
+                     type="number" 
+                     placeholder="YY"
+                  >
+               </div>
+
+               <input
+                  class="card-number cardholder-name"
+                  type="text"
+                  placeholder="Сardholder Name"
+               >
+            </div>
+
+            <div class="card-back">
+               <input
+                  type="number"
+                  class="modal-cvc"
+                  placeholder="CVC"
+               >
+            </div>
+
+            <a class="btn-favorite modal-btn-donate">
+               <h4>Donate</h4>
+            </a>
+         </div>
+      </form>
 
       <footer>
          <img src="../../assets/images/footer-desert.png" alt="desert" class="footer-desert">
+         <img src="./assets/images/bg-footer-640.png" alt="desert" class="footer-desert-640">
+
          <div class="footer">
             <div class="footer-top">
                <a href="#">
                   <img src="../../assets/icons/logo.svg" alt="logo" class="logo-footer">
                </a>
    
-               <a type="button" class="btn-favorite btn-donate">
+               <a href="#modal-1" class="btn-favorite btn-donate btn-volont">
                   <h4>Donate for volunteers</h4>
                </a>
 
@@ -327,13 +511,13 @@
                >
 
                <h4 class="y20-21">
-                  Copyright ©RSSchool and ©Yem Digital 2020 - 2021
+                  Copyright ©RSSchool <span class="del-and">and</span> ©Yem Digital 2020 - 2021
                </h4>
-               <h4>Grigoreva Margarita</h4>
+               <h4 class="autor">Grigoreva Margarita</h4>
             </div>
          </div>
       </footer>
    </div>
-   <script src="main.js"></script>
+   <script src="./pages/landing/main.js"></script>
 </body>
 </html>

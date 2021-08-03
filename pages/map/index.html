@@ -4,6 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../assets/icons/site_icon.png" type="image/x-icon">
    <title>online-zoo</title>
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
@@ -17,7 +18,11 @@
          <div class="header">
             <figure>
                <a href="../../index.html">
-                  <img src="../../assets/icons/logo.svg" alt="logo">
+                  <img
+                     src="../../assets/icons/logo.svg"
+                     alt="logo"
+                     class="header-logo"
+                  >
                </a>
                <h1 class="hidden">Online Zoo</h1>
             </figure>
@@ -48,59 +53,190 @@
                   </li>
                </ul>
             </nav>
+
+            <img
+               src="../../assets/icons/burger.svg"
+               alt="burger"
+               class="burger"
+            >
          </div>
       </header>
 
+      <div class="burger-list">
+         <nav class="nav-burger">
+            <ul>
+               <li><a class="burger-link" href="../../index.html">Main</a></li>
+            </ul>
+            <ul>
+               <li><a class="burger-link" >Map</a></li>
+            </ul>
+            <ul>
+               <li><a class="burger-link" href="../zoos/zoos_panda/index.html">Zoos</a></li>
+            </ul>
+            <ul>
+               <li><a class="burger-link" href="../page404/index.html">Contact</a></li>
+            </ul>
+         </nav>
+      </div>
+
       <main>
-         <div class="zoom">
-            <img src="../../assets/icons/zoom.png" alt="zoom">
-         </div>
-
          <div class="map">
-            <figure>
-               <img class="world-map" src="../../assets/images/map.png" alt="map">
-            </figure>
+            <img class="world-map" src="../../assets/images/map.png" alt="map">
 
-            <h4 class="name-country USA">USA</h4>
-            <h4 class="name-country DRC">Eastern DRC</h4>
-            <h4 class="name-country China">China</h4>
-
-            <div>
+            <div class="world-map-items">
                <div class="animal-on-map eagle">
                   <a href="../zoos/zoos_eagle/index.html">
                      <img src="../../assets/icons/eagle.png" alt="eagle">
                   </a>
-                  <span class="tooltiptext">EAGLE, California,USA</span>
+                  <span class="tooltiptext">
+                     EAGLE, California,USA
+                     <a href="../zoos/zoos_eagle/index.html" 
+                        type="button" class="btn-tooltip-watch"
+                     > 
+                        Watch online
+                     </a>
+                  </span>
                </div>
 
                <div class="animal-on-map allig">
                   <a href="../zoos/zoos_alig/index.html">
                      <img src="../../assets/icons/alligator.png" alt="alligator">
                   </a>
-                  <span class="tooltiptext">ALLIGATOR, Florida, USA</span>
+                  <span class="tooltiptext">
+                     ALLIGATOR, Florida, USA
+                     <a href="../zoos/zoos_alig/index.html" 
+                        type="button" class="btn-tooltip-watch"
+                     > 
+                        Watch online
+                     </a>
+                  </span>
                </div>
 
                <div class="animal-on-map gorilla">
                   <a href="../zoos/zoos_gorilla/index.html">
                      <img src="../../assets/icons/gorilla.png" alt="gorilla">
                   </a>
-                  <span class="tooltiptext">GORILLA, Eastern DRC</span>
+                  <span class="tooltiptext">
+                     GORILLA, Eastern DRC
+                     <a href="../zoos/zoos_gorilla/index.html" 
+                        type="button" class="btn-tooltip-watch"
+                     > 
+                        Watch online
+                     </a>
+                  </span>
                </div>
 
                <div class="animal-on-map panda">
                   <a href="../zoos/zoos_panda/index.html">
                      <img src="../../assets/icons/panda.png" alt="panda">
                   </a>
-                  <span class="tooltiptext">PANDA, <br>China</span>
+                  <span class="tooltiptext">
+                     PANDA, <br>China
+                     <a href="../zoos/zoos_panda/index.html" 
+                        type="button" class="btn-tooltip-watch"
+                     > 
+                        Watch online
+                     </a>
+                  </span>
                </div>
+               
+               <h4 class="name-country USA">USA</h4>
+               <h4 class="name-country DRC">Eastern DRC</h4>
+               <h4 class="name-country China">China</h4>
+            </div>
+         </div>
+         
+         <div class="wrapper__zoom">
+            <div class="zoom">
+               <div class="minus" onclick=zoomOut()></div>
+               <div class="plus" onclick=zoomIn()></div>
             </div>
          </div>
       </main>
 
-      <footer>
-         <div class="footer-desert">
-            <!-- <img src="../../assets/images/footer-desert.png" alt="desert" class="footer-desert"> -->
+      <form action="" class="modal">
+         <div id="modal-1" class="modal-1">
+            <span class="modal-close">&times;</span>
+
+            <select class="dropdown">
+               <option>Panda</option>
+               <option>Alligator</option>
+               <option>Eagle</option>
+               <option>Gorilla</option>
+            </select>
+
+         <div class="modal-amount">
+            <input
+               type="number"
+               class="modal-amount-money"
+               placeholder="Amount"
+            >
+
+            <select class="modal-amount-usd">
+               <option>USD</option>
+               <option>EUR</option>
+            </select>
          </div>
+
+         <textarea
+            class="modal-text"
+            maxlength="280"
+            placeholder="Your text here"
+         ></textarea>
+
+         <a href="#modal-2" class="btn-donate modal-btn-next">
+            <h4>Next</h4>
+         </a>
+         </div>
+
+         <div class="modal-2">
+            <div class="card-face">
+               <input
+                  class="card-number"
+                  type="number"
+                  placeholder="Сard Number"
+               >
+
+               <div class="modal-2-mm-yy">
+                  <input
+                     class="modal-mm"
+                     type="number"
+                     placeholder="MM"
+                  
+                     >
+                  <input
+                     class="modal-yy"
+                     type="number" 
+                     placeholder="YY"
+                  >
+               </div>
+
+               <input
+                  class="card-number cardholder-name"
+                  type="text"
+                  placeholder="Сardholder Name"
+               >
+            </div>
+
+            <div class="card-back">
+               <input
+                  type="number"
+                  class="modal-cvc"
+                  placeholder="CVC"
+               >
+            </div>
+
+            <a class="btn-donate modal-btn-donate">
+               <h4>Donate</h4>
+            </a>
+         </div>
+      </form>
+
+      <footer>
+         <div class="footer-desert"></div>
+         <img src="../../assets/images/bg-footer-640.png" alt="desert" 
+            class="footer-desert-640"
+         >
          
          <div class="footer">
             <div class="footer-top">
@@ -108,7 +244,7 @@
                   <img src="../../assets/icons/logo.svg" alt="logo" class="logo-footer">
                </a>
    
-               <a type="button" class="btn-donate">
+               <a href="#modal-1" class="btn-donate btn-volont btn-favorite">
                   Donate for volunteers
                </a>
 
@@ -165,9 +301,9 @@
                >
 
                <h4 class="y20-21">
-                  Copyright ©RSSchool and ©Yem Digital 2020 - 2021
+                  Copyright ©RSSchool <span class="del-and">and</span> ©Yem Digital 2020 - 2021
                </h4>
-               <h4>Grigoreva Margarita</h4>
+               <h4 class="autor">Grigoreva Margarita</h4>
             </div>
          </div>
       </footer>
