@@ -81,7 +81,8 @@ btnModalDonate.addEventListener("click", () => {
 });
 
 //map
-const mapImage = document.querySelector(".map");
+const mapImage = document.querySelector(".world-map");
+//  const mapImage = document.querySelector(".map");
 const mapItems = document.querySelector(".world-map-items");
 const mapParent = document.querySelector("main");
 
@@ -127,7 +128,9 @@ const getCoords = (elem) => {
   };
 };
 
-mapImage.addEventListener("mousedown", (e) => {
+const eventOnMap = "pointerdown" || "";
+
+mapImage.addEventListener("pointerdown", (e) => {
   const coords = getCoords(mapImage);
   let shiftX = e.pageX - coords.left;
   let shiftY = e.pageY - coords.top + 80;
@@ -154,4 +157,12 @@ mapImage.addEventListener("mousedown", (e) => {
   mapImage.ondragstart = () => {
     return;
   };
+});
+
+//  burger menu
+const burger = document.getElementsByClassName('burger')[0];
+const burgerList = document.getElementsByClassName('burger-list')[0];
+
+burger.addEventListener('click', () => {
+  burgerList.classList.toggle('show-burger-list');
 });

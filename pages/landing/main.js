@@ -174,6 +174,13 @@ document.querySelector('.control.right').addEventListener('click', function() {
 });
 
 let el = document.querySelector('.carousel-HIW');
-swipedetect(el);
-
+//  swipedetect(el);
 //testimonials slider
+
+//  burger menu
+const burger = document.getElementsByClassName('burger')[0];
+const burgerList = document.getElementsByClassName('burger-list')[0];
+
+burger.addEventListener('click', () => {
+  burgerList.classList.toggle('show-burger-list');
+});
