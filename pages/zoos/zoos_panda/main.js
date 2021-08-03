@@ -118,3 +118,11 @@ btnModalDonate.addEventListener("click", () => {
     alert("Thank you for your donation")
   }
 });
+
+//  burger menu
+const burger = document.getElementsByClassName('burger')[0];
+const burgerList = document.getElementsByClassName('burger-list')[0];
+
+burger.addEventListener('click', () => {
+  burgerList.classList.toggle('show-burger-list');
+});
